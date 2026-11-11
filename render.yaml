@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: bahbenzin-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        value: 9276147910:AAHa6VojnxcFs8GUI6PDeTmKgyj3CFjAE7U
+      - key: WEBHOOK_SECRET
+        generateValue: true
